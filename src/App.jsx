@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Navigation from './components/Navigations';
 import Hero from './components/Hero';
 import About from './components/About';

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Theme variables for custom utilities (e.g. terminal cursor) */
+.dark {
+  --color-accent: 52 211 153; /* emerald-400 */
+}
+
+:root:not(.dark) {
+  --color-accent: 16 185 129; /* emerald-500 */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: fadeInUp 0.5s ease-out forwards;
+  }
+
+  .terminal-cursor::after {
+    content: '';
+    display: inline-block;
+    width: 0.4em;
+    height: 1em;
+    margin-left: 2px;
+    background: rgb(var(--color-accent));
+    animation: blink 1s step-end infinite;
+    vertical-align: -0.15em;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+}

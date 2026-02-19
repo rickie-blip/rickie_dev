@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Menu, X, Sun, Moon, ChevronRight } from 'lucide-react';
 
 const Logo = ({ className = '' }) => (
-  <span className={`font-bold text-xl tracking-tight font-mono ${className}`}>
+  <span className={`font-bold text-lg sm:text-xl tracking-tight font-mono ${className}`}>
     <span className="text-emerald-500 dark:text-emerald-400">&gt;_</span>
     <span className="text-slate-900 dark:text-white"> Korir</span>
     <span className="text-emerald-500 dark:text-emerald-400">.dev</span>
@@ -31,7 +31,7 @@ const Navigation = ({ activeTab, setActiveTab, theme, setTheme }) => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/70 backdrop-blur-xl border-b border-slate-200/80 dark:border-slate-800/80 shadow-lg shadow-slate-200/20 dark:shadow-slate-950/20 transition-colors duration-300">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <button
             type="button"
@@ -104,7 +104,7 @@ const Navigation = ({ activeTab, setActiveTab, theme, setTheme }) => {
               className="focus:outline-none"
               aria-label="Go to home"
             >
-              <Logo className="text-2xl" />
+              <Logo className="text-xl sm:text-2xl" />
             </button>
             <button
               type="button"

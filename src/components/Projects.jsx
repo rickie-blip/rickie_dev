@@ -29,21 +29,21 @@ const Projects = () => {
   ];
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-24">
-      <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-12 flex items-center gap-3 transition-colors duration-300">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-10 sm:mb-12 flex items-center gap-3 transition-colors duration-300">
         <span className="w-8 h-1 bg-emerald-500 rounded-full" aria-hidden />
         Featured Projects
       </h2>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {projects.map((project) => (
           <div key={project.title} className={`group bg-white dark:bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 ${project.accent} transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/10 dark:hover:shadow-2xl dark:hover:shadow-emerald-500/10 shadow-sm dark:shadow-none`}>
-            <div className="p-8">
+            <div className="p-5 sm:p-8">
               <div className="mb-6 p-4 bg-slate-100 dark:bg-slate-900 rounded-lg w-fit group-hover:bg-slate-200 dark:group-hover:bg-slate-800 transition-all duration-300 group-hover:scale-110">
                 {project.icon}
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300">{project.title}</h3>
-              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 min-h-20 transition-colors duration-300">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors duration-300">{project.title}</h3>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 sm:min-h-20 transition-colors duration-300">
                 {project.desc}
               </p>
               <div className="flex flex-wrap gap-2 mt-auto">

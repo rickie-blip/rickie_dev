@@ -1,87 +1,27 @@
 # Korir Derrick Portfolio
 
-Personal portfolio website built with React, Vite, and Tailwind CSS.
+This portfolio represents who I am as a developer and the kind of work I deliver for clients.
 
-## Live Features
+## About Me
 
-- Responsive single-page portfolio layout
-- Dark/light theme toggle with persisted preference
-- Section navigation: Home, About, Experience, Projects, Contact
-- Featured deployed client projects:
-  - `https://expertcoltd.com/`
-  - `https://tpmdigital.africa`
-- Social/contact links (GitHub, LinkedIn, email)
+I am Korir Derrick, a software developer based in Nairobi, Kenya.  
+I focus on building secure, scalable, and practical digital solutions, with strong experience in backend systems, integrations, and business-focused web platforms.
 
-## Tech Stack
+I enjoy turning client ideas into reliable products that are easy to use, maintain, and grow.
 
-- React 18
-- Vite 4
-- Tailwind CSS 3
-- Lucide React Icons
+## About This Portfolio
 
-## Project Structure
+This website is my professional space to showcase:
 
-```text
-src/
-  components/
-    About.jsx
-    Contact.jsx
-    Experience.jsx
-    Footer.jsx
-    Hero.jsx
-    Navigations.jsx
-    Projects.jsx
-  App.jsx
-  index.css
-  main.jsx
-```
+- My background and experience
+- Selected real-world projects
+- The client websites I have built and deployed
+- Direct ways to contact me for opportunities and collaborations
 
-## Getting Started
+It includes featured live projects such as:
 
-### 1. Install dependencies
-
-```bash
-npm install
-```
-
-### 2. Run development server
-
-```bash
-npm run dev
-```
-
-### 3. Build for production
-
-```bash
-npm run build
-```
-
-### 4. Preview production build
-
-```bash
-npm run preview
-```
-
-## Deployment
-
-### Netlify
-
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Node version: `18+` recommended
-
-For SPA fallback (recommended), create `netlify.toml` in project root:
-
-```toml
-[build]
-  command = "npm run build"
-  publish = "dist"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-```
+- `https://expertcoltd.com/`
+- `https://tpmdigital.africa`
 
 ## Contact
 

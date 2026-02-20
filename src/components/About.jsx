@@ -1,15 +1,16 @@
 import React from 'react';
 import { GraduationCap, Code } from 'lucide-react';
+import portfolioImage from '../../Images/portfolio.png';
 
 const About = () => (
-  <div className="max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+  <section className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
     <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-8 flex items-center gap-3 transition-colors duration-300">
       <span className="w-8 h-1 bg-emerald-500 rounded-full" aria-hidden />
       About Me
     </h2>
 
-    <div className="grid md:grid-cols-3 gap-8 sm:gap-12">
-      <div className="md:col-span-2 space-y-6 text-slate-600 dark:text-slate-300 leading-relaxed transition-colors duration-300">
+    <div className="grid lg:grid-cols-3 gap-8 sm:gap-10 items-start">
+      <div className="lg:col-span-2 space-y-6 text-slate-600 dark:text-slate-300 leading-relaxed transition-colors duration-300">
         <p>
           Hello! I'm <span className="text-slate-900 dark:text-white font-semibold">Korir Derrick</span>, a results-driven Software Developer based in{' '}
           <span className="text-slate-900 dark:text-white font-semibold">Nairobi, Kenya</span>.
@@ -40,7 +41,16 @@ const About = () => (
         </div>
       </div>
 
-      <div className="space-y-6">
+      <div className="space-y-6 lg:sticky lg:top-24">
+        <div className="bg-white dark:bg-slate-800/50 p-3 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm dark:shadow-none transition-colors duration-300">
+          <img
+            src={portfolioImage}
+            alt="Korir Derrick"
+            className="w-full h-auto rounded-lg object-cover"
+            loading="lazy"
+          />
+        </div>
+
         <div className="bg-white dark:bg-slate-800/50 p-5 sm:p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm dark:shadow-none transition-colors duration-300">
           <h3 className="text-slate-900 dark:text-white font-semibold mb-4 flex items-center gap-2 transition-colors duration-300">
             <Code size={18} className="text-emerald-500 dark:text-emerald-400" aria-hidden /> Tech Stack
@@ -82,7 +92,7 @@ const About = () => (
         </div>
       </div>
     </div>
-  </div>
+  </section>
 );
 
 export default About;

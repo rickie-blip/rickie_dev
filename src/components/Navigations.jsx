@@ -1,8 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { Menu, X, Sun, Moon, ChevronRight } from 'lucide-react';
+import devLogo from '../../Images/Dev logo.png';
 
 const Logo = ({ className = '' }) => (
-  <span className={`font-bold text-lg sm:text-xl tracking-tight font-mono ${className}`}>
+  <span className={`flex items-center gap-2 font-bold text-lg sm:text-xl tracking-tight font-mono ${className}`}>
+    <img src={devLogo} alt="Dev logo" className="h-8 w-8 rounded-md object-cover" loading="lazy" />
     <span className="text-emerald-500 dark:text-emerald-400">&gt;_</span>
     <span className="text-slate-900 dark:text-white"> Korir</span>
     <span className="text-emerald-500 dark:text-emerald-400">.dev</span>
@@ -14,7 +16,6 @@ const Navigation = ({ activeTab, setActiveTab, theme, setTheme }) => {
 
   const navItems = useMemo(() => [
     { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
     { id: 'experience', label: 'Experience' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' }
@@ -95,7 +96,7 @@ const Navigation = ({ activeTab, setActiveTab, theme, setTheme }) => {
       {isOpen && (
         <div
           id="mobile-menu"
-          className="md:hidden fixed inset-0 top-16 z-40 bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 flex flex-col transition-colors duration-300 overflow-y-auto"
+          className="md:hidden absolute top-16 left-0 right-0 z-[60] max-h-[calc(100vh-4rem)] bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 flex flex-col transition-colors duration-300 overflow-y-auto shadow-xl"
         >
           <div className="flex items-center justify-between px-4 py-4 border-b border-slate-200 dark:border-slate-800">
             <button

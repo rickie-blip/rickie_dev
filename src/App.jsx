@@ -42,12 +42,25 @@ const App = () => {
 
   const renderContent = () => {
     switch (activeTab) {
-      case 'home': return <Hero setActiveTab={setActiveTab} />;
-      case 'about': return <About />;
+      case 'home': return (
+        <>
+          <Hero setActiveTab={setActiveTab} />
+          <div className="border-t border-slate-200/80 dark:border-slate-800/80 bg-white/40 dark:bg-slate-900/20 transition-colors duration-300">
+            <About />
+          </div>
+        </>
+      );
       case 'experience': return <Experience />;
       case 'projects': return <Projects />;
       case 'contact': return <Contact />;
-      default: return <Hero setActiveTab={setActiveTab} />;
+      default: return (
+        <>
+          <Hero setActiveTab={setActiveTab} />
+          <div className="border-t border-slate-200/80 dark:border-slate-800/80 bg-white/40 dark:bg-slate-900/20 transition-colors duration-300">
+            <About />
+          </div>
+        </>
+      );
     }
   };
 
